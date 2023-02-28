@@ -1,0 +1,29 @@
+<%- include('header'); -%>
+
+<section>
+  <div class="row">
+    <div class="col">
+      <h1>Sign up here</h1>
+      <form class="" action="/insertRecords" method="post">
+      <label for="firstName">firstName: </label>
+      <input type="text" name="firstName" value="" required>
+      <br><br>
+      <label for="lastName">lastName: </label>
+      <input type="text" name="lastName" value="" required>
+      <br><br>
+      <label for="email">email: </label>
+      <input type="email" name="email" value="" required>
+      <br><br>
+      <button type="submit" name="my-btn">Save me</button>
+      </form>
+      <br>
+      <button type="button" name="button">
+        <a href="/getRecords">back</a>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<%- include('footer'); -%>

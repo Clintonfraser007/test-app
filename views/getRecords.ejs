@@ -1,0 +1,39 @@
+<%- include('header'); -%>
+<section>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>email</th>
+    </tr>
+    <tbody>
+      <td>
+        <button type="button" name="button">
+          <a href="/insertRecords">Add Records</a>
+        </button>
+      </td>
+      <td>
+        <button type="button" name="button" onclick="return confirm('You will remove all the data from the database?Are you sure.')">
+          <a href="/deleteallrecords">DeleteAll</a>
+        </button>
+      </td>
+      <% results.forEach((item) => { %>
+      <tr>
+        <td><%= item.id %></td>
+          <td><%= item.firstName %></td>
+          <td><%= item.lastName %></td>
+          <td><%= item.email %></td>
+          <td><a href="/getRecords/<%= item.id %>">fetch</a></td>
+          <td><a href="/getRecords">Back</a></td>
+          <td><a href="/delete/<%= item.id %>" onclick="return confirm('Are you sure?you want to delete this item.')">delete</a></td>
+          <td><a href="/updateRecord/<%= item.id %>">update</a></td>
+
+        <% }) %>
+
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<%- include('footer'); -%>

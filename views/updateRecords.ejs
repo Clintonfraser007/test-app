@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+<section>
+  <div class="row">
+    <div class="col">
+      <h1>Update Records</h1>
+      <form class="" action="/updateRecord/<%= id %>" method="post">
+      <label for="firstName">firstName: </label>
+      <input type="text" name="firstName" value="<%= firstName %>" required>
+      <label for="lastName">lastName: </label>
+      <input type="text" name="lastName" value="<%= lastName %>" required>
+      <label for="email">email: </label>
+      <input type="email" name="email" value="<%= email %>" required>
+      <button type="submit" name="my-btn">Save updates</button>
+      </form>
+      <button type="button" name="button">
+        <a href="/getRecords">back</a>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<%- include('footer'); -%>
